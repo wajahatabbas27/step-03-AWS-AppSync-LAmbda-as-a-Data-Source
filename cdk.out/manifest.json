@@ -1,0 +1,142 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Step03AppsyncLambdaAsDatasourceStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Step03AppsyncLambdaAsDatasourceStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Step03AppsyncLambdaAsDatasourceStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Step03AppsyncLambdaAsDatasourceStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/567a09b395a2dc2cbb1c93c6be7a2c6f9985d97a051b87f4d52902edbbef3875.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Step03AppsyncLambdaAsDatasourceStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Step03AppsyncLambdaAsDatasourceStack.assets"
+      ],
+      "metadata": {
+        "/Step03AppsyncLambdaAsDatasourceStack/GRAPHQL_API/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GRAPHQLAPI0BDC9FAD"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/GRAPHQL_API/Schema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GRAPHQLAPISchema03BCA39C"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/GRAPHQL_API/DefaultApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GRAPHQLAPIDefaultApiKey38D90378"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/GRAPHQL_API/lambda-data-source/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GRAPHQLAPIlambdadatasourceServiceRole42E93D9F"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/GRAPHQL_API/lambda-data-source/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GRAPHQLAPIlambdadatasourceServiceRoleDefaultPolicyF231A088"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/GRAPHQL_API/lambda-data-source/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GRAPHQLAPIlambdadatasourceB3BFE903"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/GRAPHQL_API/lambda-data-source/QuerynotesResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GRAPHQLAPIlambdadatasourceQuerynotesResolver7B2909EE"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/GRAPHQL_API/lambda-data-source/QuerycustomNoteResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GRAPHQLAPIlambdadatasourceQuerycustomNoteResolver6947E577"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/ApiUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiUrl"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/ApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiKey"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/LambdaFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFunctionServiceRoleC555A460"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/LambdaFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFunctionBF21E41F"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Step03AppsyncLambdaAsDatasourceStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Step03AppsyncLambdaAsDatasourceStack"
+    }
+  }
+}
